@@ -1,0 +1,55 @@
+
+.burgerIcon {
+    width: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: white;
+    font-weight: 700;
+}
+
+.burgerContainer {
+    display: flex !important;
+    gap: 30px;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+.searchInput {
+    transition: .5s;
+    height: 30px;
+    background: transparent !important;
+    color: white;
+    border: 1px solid white;
+    display: none;
+    border-right: none;
+}
+
+.searchInput:focus-visible {
+    outline: 0px;
+}
+
+.searchIcon {
+    border: 1px solid white;
+    border-left: none;
+    height: 30px;
+    display: none;
+}
+
+@media (max-width:400px) {
+    .searchInput {
+        display: block;
+    }
+
+    .searchIcon {
+        display: block;
+    }
+}

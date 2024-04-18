@@ -1,0 +1,216 @@
+.main {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.background {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0)), url("https://www.intofilm.org/intofilm-production/9628/scaledcropped/630x355/resources/9628/into-film-plus-catalogue-image-07-22.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-bottom: -100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video {
+    transform: scale(1.5);
+}
+
+.movieData {
+    position: absolute;
+    bottom: 150px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 20px;
+    width: 100%;
+    color: white;
+}
+
+.filmTitle {
+    font-size: 40px;
+}
+
+.overViewText {
+    max-width: 300px;
+    animation: overViewText 2s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes overViewText {
+    0% {
+        font-size: 15px;
+    }
+
+    100% {
+
+        font-size: 3px;
+        opacity: 0;
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.playBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.665);
+    margin-right: 10px;
+}
+
+.infoBtn {
+    width: 130px;
+    height: 50px;
+    background-color: rgba(126, 126, 126, 0.723);
+}
+
+.infoBtn,
+.playBtn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: end;
+    height: 50px;
+    gap: 5px;
+}
+
+.age {
+    background-color: rgba(126, 126, 126, 0.723);
+    border-left: 2px solid white;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.sound {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .controls {
+        justify-content: start;
+    }
+
+    .movieData {
+        bottom: 100px;
+        flex-direction: column;
+    }
+
+    .filmTitle {
+        font-size: 30px;
+    }
+
+    .playBtn {
+        width: 80px;
+        height: 40px;
+    }
+
+    .infoBtn {
+        width: 110px;
+        height: 40px;
+
+    }
+
+    .age {
+        background-color: rgba(126, 126, 126, 0.723);
+        border-left: 2px solid white;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    .sound {
+        width: 40px;
+        height: 40px;
+
+    }
+}
+
+@media (max-width:580px) {
+    .buttons {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        gap: 10px;
+    }
+
+    .playBtn {
+        margin: 0;
+    }
+
+    .controls {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        justify-content: end;
+        width: min-content;
+    }
+
+    .age {
+        display: none;
+    }
+
+    .overViewText {
+        display: none;
+    }
+
+    .movieData {
+        margin-top: 10px;
+    }
+
+    .moviesLists {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width:450px) {
+    .buttons {
+        flex-direction: row;
+        right: unset;
+        bottom: 0;
+        top: 62px;
+    }
+
+    .titleBtn {
+        display: none;
+    }
+
+    .playBtn,
+    .infoBtn {
+        width: 40px;
+    }
+}

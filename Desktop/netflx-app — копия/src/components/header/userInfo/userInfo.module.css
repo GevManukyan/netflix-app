@@ -1,0 +1,27 @@
+.settings {
+    background-color: black;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.userData {
+    display: flex;
+    align-items: center;
+
+}
+
+.userList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

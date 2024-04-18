@@ -1,0 +1,167 @@
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    color: white;
+    transition: .5s;
+}
+
+.scroled {
+    background-color: rgba(0, 0, 0, 0.912);
+}
+
+.logo {
+    width: 150px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.toolsMenu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    justify-content: end;
+}
+
+.burger {
+    display: none;
+}
+
+.toolsMenu input {
+    transition: .5s;
+    height: 30px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-left: none;
+}
+
+.toolsMenu input:focus-visible {
+    outline: 0px;
+}
+
+.inputIsOpened {
+    max-width: 150px;
+    visibility: visible;
+}
+
+.inputIsClosed {
+    max-width: 0px;
+    visibility: hidden;
+}
+
+.searchIconDontMove {
+    cursor: pointer;
+    position: absolute;
+    right: 95px;
+    top: 15px;
+    height: 30px;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+.searchIconMove {
+    position: absolute;
+    right: 250px;
+    height: 30px;
+    border: 1px solid white;
+    border-right: transparent;
+    top: 18px;
+    transition: .5s;
+}
+
+.settings {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    display: none;
+}
+
+.userSettings:hover .settings {
+    display: block !important;
+}
+
+.notification {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    display: none;
+}
+
+.userNotification:hover .notification {
+    display: block;
+}
+
+@media(max-width:1000px) {
+    .menu {
+        gap: 20px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:860px) {
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+}
+
+@media(max-width:768px) {
+    .toolsMenu input {
+        width: min-content;
+        position: absolute;
+        right: 0;
+        top: 63px;
+    }
+
+    .searchIconMove {
+        position: absolute;
+        right: 150px;
+        top: 63px;
+        transition: .5s;
+    }
+
+    .toolsMenu {
+        width: 100px;
+    }
+}
+
+@media (max-width:400px) {
+    .searchIconDontMove {
+        display: none;
+    }
+
+    .toolsMenu {
+        width: 40px;
+    }
+
+    .userImage {
+        width: 25px !important;
+    }
+}

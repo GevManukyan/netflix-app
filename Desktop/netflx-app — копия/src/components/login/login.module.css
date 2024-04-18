@@ -1,0 +1,93 @@
+
+.loginPage{
+    background-color: rgb(2, 2, 29);
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.container > h1{
+    color: white;
+}
+.usersList{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: space-between;
+}
+.userData{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: grey;
+    font-weight: 800;
+    gap: 10px;
+    cursor: pointer; 
+}
+.userData:hover{
+  color: white;
+}
+.userData:hover .userPicture{
+    border: 2px solid rgb(255, 255, 255);
+    transform: scale(1.02);
+}
+.userPicture{
+    width: 150px;
+    height: 150px;
+}
+
+.ManageBtn{
+    width: 200px;
+    height: 40px;
+    color: grey;
+    background-color: transparent;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ManageBtn:hover{
+    color: rgb(2, 2, 29);
+    background-color: rgb(185, 183, 183);
+    border: rgb(2, 2, 29);
+    cursor: pointer;
+}
+
+@media (max-width:580px){
+    .userPicture{
+        width: 100px;
+        height: 100px;
+    }
+    .container > h1{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:400px){
+    .container{
+        width: 100%;
+        gap: 0;
+    }
+   .usersList{
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    padding: 10px;
+   }
+   .userData{
+    flex-direction: row;
+    padding-right: 10px;
+    width: 250px;
+   }
+}

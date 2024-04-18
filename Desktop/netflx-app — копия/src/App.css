@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#react-burger-menu-btn{
+  width: 50px !important;
+  height: 50px !important;
+  top: 10px !important;
+  left: 10px !important;
+  
+}
+.bm-overlay {
+  background: #000000d6 !important;
+  left: 0;
+  top: 0;
+}
+.bm-menu-wrap ,.bm-item-list{
+  width: max-content !important;
+  height: max-content !important  ;
+}
+.bm-menu{
+  height: max-content !important;
+  overflow:  hidden !important;
+}
+.react-multiple-carousel__arrow--right{
+  height: 100%;
+  right: 0 !important;
+  border-radius: 0 !important;
+}
+.react-multiple-carousel__arrow--left{
+  height: 100%;
+  left: 0 !important;
+  border-radius: 0 !important;
+}
+
+.react-multi-carousel-dot-list {
+  display: none !important;
+}
